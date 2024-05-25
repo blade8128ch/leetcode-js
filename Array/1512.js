@@ -8,14 +8,14 @@
  * @param {number[]} nums
  * @return {number}
  */
-var numIdenticalPairs = function(nums) {
-let count=0
-while(nums.length>0){
-    let excludeArray=nums.filter(item =>  item=== nums[0])
-    let includeArray=nums.filter(item =>  item!== nums[0])
-    nums=includeArray
-    let n=excludeArray.length
-    count+=n*(n-1)/2
-}
-return count
+var numIdenticalPairs = function (nums) {
+    let count = 0
+    while (nums.length > 0) {
+        let excludeArray = nums.filter(item => item === nums[0])
+        let includeArray = nums.filter(item => item !== nums[0])
+        nums = includeArray
+        let n = excludeArray.length
+        count += n * (n - 1) / 2
+    }
+    return count
 };
